@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.media a {
+  border: 1px solid #47484b;
+  border-radius: 9999999px; 
+  width: 50px; 
+  transition: opacity 2s ease, width 0.6s ease;
+  overflow: hidden; 
+}
+
+.media a p {
+  display: none; 
+  font-size: 3px; 
+
+  white-space: nowrap;        
+  overflow: hidden;           
+  text-overflow: ellipsis;    
+}
+
+.media a:hover p {
+  display: inline; 
+  font-size: 16px; 
+}
+
+.media a:hover {
+  width: 140px;
+}
+
+.media:hover > :not(:hover) { /* if one of the children in .media is hovered other will apply this class.   */
+  opacity: 0.4; 
+}
+
